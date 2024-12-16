@@ -56,7 +56,7 @@ export default function Projects() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <FadeIn key={index} delay={index * 200}>
-                            <Card className="overflow-hidden bg-tertiary border border-primary">
+                            <Card className="overflow-hidden bg-tertiary border border-primary bg-white">
                                 <div className="relative h-40">
                                     <Image
                                         src={project.image}

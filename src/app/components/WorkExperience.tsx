@@ -52,11 +52,11 @@ export default function WorkExperience() {
     return (
         <FadeIn>
             <section id="experience" className="py-20 px-4 bg-secondary">
-                <h2 className="text-3xl font-bold mb-8 text-center text-primary">Work Experience</h2>
+                <h2 className="text-3xl font-bold mb-8 text-center text-primary ">Work Experience</h2>
                 <div className="max-w-4xl mx-auto space-y-6">
                     {experiences.map((exp, index) => (
                         <FadeIn key={index} delay={index * 200}>
-                            <Card className="border border-primary bg-tertiary">
+                            <Card className="border border-primary bg-tertiary bg-white">
                                 <div className="flex">
                                     <div className="flex-grow">
                                         <CardHeader>
