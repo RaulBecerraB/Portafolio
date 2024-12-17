@@ -88,7 +88,7 @@ export default function Projects() {
                                         {project.technologies.map((tech, i) => {
                                             const Icon = getTechIcon(tech);
                                             return (
-                                                <span key={i} className="bg-secondary text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                                                <span key={i} className="bg-secondary text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
                                                     <Icon size={12} />
                                                     {tech}
                                                 </span>

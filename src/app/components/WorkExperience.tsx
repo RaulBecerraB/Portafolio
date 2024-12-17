@@ -28,7 +28,7 @@ const experiences = [
         contract: "Full-time",
         period: "January 2021 - Present",
         description: "Leading the development of scalable web applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved performance of existing applications.",
-        logo: "/placeholder.svg?height=100&width=100",
+        logo: "AAAIMX-logo.svg",
         technologies: ["React", "Node.js", "AWS", "Docker"]
     },
     {
@@ -87,7 +87,7 @@ export default function WorkExperience() {
                                                 {exp.technologies.map((tech, i) => {
                                                     const Icon = getTechIcon(tech);
                                                     return (
-                                                        <span key={i} className="bg-secondary text-primary px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                                                        <span key={i} className="bg-secondary text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
                                                             <Icon size={12} />
                                                             {tech}
                                                         </span>

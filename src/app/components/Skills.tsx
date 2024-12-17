@@ -24,7 +24,7 @@ export default function Skills() {
                 <div className="flex flex-wrap justify-center gap-4">
                     {skills.map((skill, index) => (
                         <FadeIn key={index} delay={index * 100}>
-                            <span className="bg-secondary text-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
+                            <span className="bg-tertiary text-primary border border-primary px-3 py-1 rounded-full text-sm flex items-center gap-2">
                                 {skill.icon && <skill.icon size={16} />}
                                 {skill.name}
                             </span>
