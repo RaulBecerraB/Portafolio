@@ -25,6 +25,7 @@ const experiences = [
     {
         title: "Senior Full Stack Developer",
         company: "Tech Innovators Inc.",
+        contract: "Full-time",
         period: "January 2021 - Present",
         description: "Leading the development of scalable web applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved performance of existing applications.",
         logo: "/placeholder.svg?height=100&width=100",
@@ -33,6 +34,7 @@ const experiences = [
     {
         title: "Front-end Developer",
         company: "Creative Web Solutions",
+        contract: "Freelance",
         period: "March 2019 - December 2020",
         description: "Developed responsive and accessible user interfaces using React and Vue.js. Collaborated on implementing a new microservices architecture.",
         logo: "/placeholder.svg?height=100&width=100",
@@ -41,6 +43,7 @@ const experiences = [
     {
         title: "Junior Developer",
         company: "StartUp Dynamics",
+        contract: "Internship",
         period: "June 2018 - February 2019",
         description: "Participated in the development of a mobile application using React Native. Learned about agile methodologies and software development best practices.",
         logo: "/placeholder.svg?height=100&width=100",
@@ -60,9 +63,24 @@ export default function WorkExperience() {
                                 <div className="flex">
                                     <div className="flex-grow">
                                         <CardHeader>
-                                            <CardTitle className="text-primary">{exp.title}</CardTitle>
-                                            <CardDescription className="text-secondary">{exp.company} | {exp.period}</CardDescription>
+                                            <div className="flex flex-row items-center gap-4">
+                                                <Image
+                                                    src={exp.logo}
+                                                    alt={`${exp.company} logo`}
+                                                    width={80}
+                                                    height={80}
+                                                    className="rounded-lg border-primary border"
+                                                />
+                                                <div>
+                                                    <CardTitle className="text-primary">{exp.title}</CardTitle>
+                                                    <CardDescription className="text-secondary font-semibold">
+                                                        {exp.company} | {exp.contract}
+                                                    </CardDescription>
+                                                    <CardDescription className="text-secondary">{exp.period}</CardDescription>
+                                                </div>
+                                            </div>
                                         </CardHeader>
+
                                         <CardContent>
                                             <p className="text-primary mb-4">{exp.description}</p>
                                             <div className="flex flex-wrap gap-2">
@@ -78,9 +96,7 @@ export default function WorkExperience() {
                                             </div>
                                         </CardContent>
                                     </div>
-                                    <div className="flex items-center justify-center p-4">
-                                        <Image src={exp.logo} alt={`${exp.company} logo`} width={100} height={100} className="rounded-full" />
-                                    </div>
+                                    
                                 </div>
                             </Card>
                         </FadeIn>
