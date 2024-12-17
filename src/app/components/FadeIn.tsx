@@ -39,4 +39,3 @@ export default function FadeIn({ children, delay = 0 }: FadeInProps) {
         </div>
     )
 }
-

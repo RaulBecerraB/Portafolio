@@ -9,7 +9,7 @@ export default function Hero() {
                 <div className="text-center md:text-left">
                     <h1 className="text-4xl font-bold mb-4 text-primary">Full Stack Developer</h1>
                     <p className="text-xl mb-8 text-primary">Creating innovative web solutions from end to end</p>
-                    <Button>
+                    <Button asChild>
                         <a href="#projects" className="bg-primary text-tertiary hover:bg-secondary transition-colors">View Projects</a>
                     </Button>
                 </div>
