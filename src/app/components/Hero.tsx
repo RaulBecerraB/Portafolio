@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import FadeIn from './FadeIn'
+import { Button } from '@/app/components/ui/button'
 
 export default function Hero() {
     return (
@@ -8,9 +9,9 @@ export default function Hero() {
                 <div className="text-center md:text-left">
                     <h1 className="text-4xl font-bold mb-4 text-primary">Full Stack Developer</h1>
                     <p className="text-xl mb-8 text-primary">Creating innovative web solutions from end to end</p>
-                    <button>
+                    <Button>
                         <a href="#projects" className="bg-primary text-tertiary hover:bg-secondary transition-colors">View Projects</a>
-                    </button>
+                    </Button>
                 </div>
                 <div className="w-48 h-48 relative rounded-full overflow-hidden border-4 border-primary">
                     <Image
