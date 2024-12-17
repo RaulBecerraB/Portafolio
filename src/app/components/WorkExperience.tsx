@@ -66,12 +66,12 @@ export default function WorkExperience() {
                                             <div className="flex flex-row items-center gap-4">
                                                 <Image
                                                     src={exp.logo}
-                                                    alt={`${exp.company} logo`}
+                                                    alt={`logo`}
                                                     width={80}
                                                     height={80}
                                                     className="rounded-lg border-primary border"
                                                 />
-                                                <div>
+                                                <div className='flex flex-col gap-1'>
                                                     <CardTitle className="text-primary">{exp.title}</CardTitle>
                                                     <CardDescription className="text-secondary font-semibold">
                                                         {exp.company} | {exp.contract}
