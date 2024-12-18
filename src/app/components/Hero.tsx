@@ -15,10 +15,11 @@ export default function Hero() {
                 </div>
                 <div className="w-48 h-48 relative rounded-full overflow-hidden border-4 border-primary">
                     <Image
-                        src="/placeholder.svg?height=192&width=192"
+                        src="/profile-picture.jpg"
                         alt="Your photo"
                         layout="fill"
                         objectFit="cover"
+                        className="transition-transform duration-300 ease-in-out scale-110"
                     />
                 </div>
             </section>
