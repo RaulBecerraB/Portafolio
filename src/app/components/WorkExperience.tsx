@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/app/components/ui/card"
-import { CodepenIcon, Server, Database, FileCode2, BrainCircuit } from 'lucide-react'
+import { CodepenIcon, Server, Database, FileCode2, BrainCircuit, ArrowUpRight, Github } from 'lucide-react'
 import FadeIn from './FadeIn'
+import { link } from 'fs'
 
 const getTechIcon = (tech: string) => {
     switch (tech.toLowerCase()) {
@@ -23,31 +24,15 @@ const getTechIcon = (tech: string) => {
 
 const experiences = [
     {
-        title: "Senior Full Stack Developer",
-        company: "Tech Innovators Inc.",
-        contract: "Full-time",
-        period: "January 2021 - Present",
-        description: "Leading the development of scalable web applications using React, Node.js, and AWS. Implemented CI/CD pipelines and improved performance of existing applications.",
-        logo: "AAAIMX-logo.svg",
-        technologies: ["React", "Node.js", "AWS", "Docker"]
-    },
-    {
-        title: "Front-end Developer",
-        company: "Creative Web Solutions",
+        title: "Junior Frontend Developer",
+        company: "AAAIMX",
         contract: "Freelance",
-        period: "March 2019 - December 2020",
-        description: "Developed responsive and accessible user interfaces using React and Vue.js. Collaborated on implementing a new microservices architecture.",
-        logo: "/placeholder.svg?height=100&width=100",
-        technologies: ["React", "Vue.js", "CSS3", "Webpack"]
-    },
-    {
-        title: "Junior Developer",
-        company: "StartUp Dynamics",
-        contract: "Internship",
-        period: "June 2018 - February 2019",
-        description: "Participated in the development of a mobile application using React Native. Learned about agile methodologies and software development best practices.",
-        logo: "/placeholder.svg?height=100&width=100",
-        technologies: ["React Native", "JavaScript", "Git"]
+        period: "August 2024 - Present",
+        description: "Frontend for the inventory and loan management platform developed for the Robotics Division of the AAAIMX organization. This application enables efficient management of resources and equipment, facilitating control and streamlining the loan process.",
+        logo: "AAAIMX-logo.svg",
+        technologies: ["React", "Node.js", "Next.js","TypeScript"],
+        link: "https://aaaimx.com/",
+        repository: "https://github.com/RaulBecerraB/TechShare-FrontEnd"
     }
 ]
 
@@ -59,7 +44,7 @@ export default function WorkExperience() {
                 <div className="max-w-4xl mx-auto space-y-6">
                     {experiences.map((exp, index) => (
                         <FadeIn key={index} delay={index * 200}>
-                            <Card className="border border-primary bg-tertiary bg-white">
+                            <Card className="border border-primary bg-tertiary bg-white relative">
                                 <div className="flex">
                                     <div className="flex-grow">
                                         <CardHeader>
@@ -78,9 +63,21 @@ export default function WorkExperience() {
                                                     </CardDescription>
                                                     <CardDescription className="text-secondary">{exp.period}</CardDescription>
                                                 </div>
+                                                <div className="ml-auto mb-auto flex gap-4">
+                                                    <a href={exp.repository} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors">
+                                                        <Github size={24} />
+                                                    </a>
+                                                    <a
+                                                        href={exp.link}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="text-primary hover:text-secondary transition-colors"
+                                                    >
+                                                        <ArrowUpRight size={24} />
+                                                    </a>
+                                                </div>
                                             </div>
                                         </CardHeader>
-
                                         <CardContent>
                                             <p className="text-primary mb-4">{exp.description}</p>
                                             <div className="flex flex-wrap gap-2">
@@ -96,9 +93,9 @@ export default function WorkExperience() {
                                             </div>
                                         </CardContent>
                                     </div>
-                                    
                                 </div>
                             </Card>
+
                         </FadeIn>
                     ))}
                 </div>
