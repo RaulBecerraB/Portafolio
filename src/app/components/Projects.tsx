@@ -23,13 +23,13 @@ const getTechIcon = (tech: string) => {
 
 const projects = [
     {
-        title: "E-commerce Platform",
-        description: "A full-stack e-commerce platform built with React and Node.js",
-        type: "Fullstack",
-        link: "https://example.com/ecommerce",
-        githubLink: "https://github.com/yourusername/ecommerce",
-        image: "/placeholder.svg?height=200&width=300",
-        technologies: ["React", "Node.js", "MongoDB", "Express"]
+        title: "Tic Tac Toe",
+        description: "The purpose of this project is to demonstrate my skills in JavaScript, HTML, CSS, and creating dynamic and interactive user interfaces (UI).",
+        type: "Frontend",
+        link: "https://tictactoespa.netlify.app/",
+        githubLink: "https://github.com/RaulBecerraB/Tic-Tac-Toe",
+        image: "/TicTacToe.png",
+        technologies: ["React", "JavaScript"]
     },
     {
         title: "Interactive Dashboard",
@@ -61,12 +61,14 @@ export default function Projects() {
                         <FadeIn key={index} delay={index * 200}>
                             <Card className="overflow-hidden bg-white border border-primary">
                                 <div className="relative h-40">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        layout="fill"
-                                        objectFit="cover"
-                                    />
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer">	
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            layout="fill"
+                                            objectFit="cover"
+                                        />
+                                    </a>
                                 </div>
                                 <CardHeader>
                                     <div className="flex justify-between items-center">
