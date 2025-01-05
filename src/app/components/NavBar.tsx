@@ -35,7 +35,7 @@ export function NavBar() {
 
     return (
         <nav className={`fixed top-0 left-0 right-0 bg-tertiary p-4 flex items-center justify-between transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'} z-50`}>
-            <div className="text-primary font-bold text-xl">Raúl Becerra</div>
+            <div className="text-primary font-bold text-xl">{"< Raúl Becerra />"}</div>
             <div className="flex justify-center flex-1">
                 {navItems.map((item) => (
                     <a
@@ -48,6 +48,9 @@ export function NavBar() {
                     </a>
                 ))}
             </div>
+            <h2 className="ml-auto font-semibold text-primary border-primary">
+                🚧 UNDER CONSTRUCTION 🚧
+            </h2>
         </nav>
     )
 }
