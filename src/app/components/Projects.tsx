@@ -25,29 +25,28 @@ const projects = [
     {
         title: "Tic Tac Toe",
         description: "The purpose of this project is to demonstrate my skills in JavaScript, HTML, CSS, and creating dynamic and interactive user interfaces (UI).",
-        type: "Frontend",
+        type: "React Frontend",
         link: "https://tictactoespa.netlify.app/",
         githubLink: "https://github.com/RaulBecerraB/Tic-Tac-Toe",
         image: "/TicTacToe.png",
         technologies: ["React", "JavaScript"]
     },
     {
-        title: "Interactive Dashboard",
-        description: "A data analysis dashboard with dynamic charts using D3.js",
-        type: "Frontend",
-        link: "https://example.com/dashboard",
-        githubLink: "https://github.com/yourusername/dashboard",
-        image: "/placeholder.svg?height=200&width=300",
-        technologies: ["React", "D3.js", "CSS3", "REST API"]
+        title: "Cookie Clicker Game",
+        description: "The purpose of this project is to demonstrate my skills in JavaScript, HTML, CSS, and creating dynamic and interactive user interfaces (UI).",
+        type: "React Frontend",
+        link: "https://cookie-clicker-77yc.vercel.app/",
+        githubLink: "https://github.com/RaulBecerraB/Cookie-Clicker",
+        image: "/CookieClicker.png",
+        technologies: ["React", "JavaScript", "TailwindCSS"]
     },
     {
         title: "RESTful API",
-        description: "A robust API built with Express.js and MongoDB",
-        type: "Backend",
-        link: "https://example.com/api",
-        githubLink: "https://github.com/yourusername/api",
-        image: "/placeholder.svg?height=200&width=300",
-        technologies: ["Node.js", "Express", "MongoDB", "JWT"]
+        description: "This project is a REST API for managing a product catalog and its categories. The application is built with Java, using Spring Boot and a MySQL database.",
+        type: "Java Backend",
+        githubLink: "https://github.com/RaulBecerraB/ProductCatalog",
+        image: "/ProductCatalog.png",
+        technologies: ["Java", "SpringBoot", "MySQL"]
     }
 ]
 
@@ -77,9 +76,11 @@ export default function Projects() {
                                             <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors">
                                                 <Github size={24} />
                                             </a>
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors">
-                                                <ArrowUpRight size={24} />
-                                            </a>
+                                            {project.link && (
+                                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-secondary transition-colors">
+                                                    <ArrowUpRight size={24} />
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                     <CardDescription className="text-secondary">{project.type}</CardDescription>
